@@ -7,7 +7,10 @@ public class IdleState : State
 {
     float timerToWait = 3;
     float timer = 0;
+
+
     public float TimerToWait => timerToWait;
+    public float Timer => timer;
 
     public bool TimerStarted {  get; private set; }
 
@@ -28,31 +31,37 @@ public class IdleState : State
 
     public override void Update()
     {
-
+        StartTimer();
     }
 
     public override void Exit()
     {
         base.Exit();
+        ResetTimer();
     }
 
 
     void Init()
     {
         timerToWait = Random.Range(0, 7);
-
-
     }
 
     void StartTimer()
     {
         timer += Time.deltaTime;
+        if (timer >= timerToWait)
+        {
+           // ResetTimer();
+            Debug.Log("FINI");
 
+        }
+        //Debug.Log(timer);
     }
 
     void ResetTimer()
     {
         TimerStarted = false;
+        timerToWait = Random.Range(0, 7);
         timer = 0;
     }
 }

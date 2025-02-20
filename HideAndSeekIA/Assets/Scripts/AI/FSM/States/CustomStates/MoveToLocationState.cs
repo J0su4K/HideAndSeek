@@ -28,7 +28,7 @@ public class MoveToLocationState : State
 
     public override void Exit()
     {
-
+        movementAIComponent.ResetLocation();
     }
 
     void Init()

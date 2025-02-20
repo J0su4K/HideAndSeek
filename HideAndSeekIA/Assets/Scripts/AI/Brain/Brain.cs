@@ -34,7 +34,7 @@ public class Brain : MonoBehaviour
 
         //Add Transition//
         fsm.AddTransition(_movementState , _idleState , () => _movementState.MovementAIComponent.IsAtLocation);
-        fsm.AddTransition(_idleState, _movementState , () => 1 < 0);
+        fsm.AddTransition(_idleState, _movementState , () => _idleState.Timer >= _idleState.TimerToWait);
         // fsm
         //Add Transition//
 

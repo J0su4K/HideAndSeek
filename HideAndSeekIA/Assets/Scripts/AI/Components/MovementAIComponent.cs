@@ -10,7 +10,9 @@ public class MovementAIComponent : MonoBehaviour
     [SerializeField] NavMeshAgent agent = null;
     [SerializeField] bool useDebug = true;
 
+   
     [field:SerializeField] public bool CanMove { get;  set; } = true;
+
     public bool IsAtLocation => Vector3.Distance(gameObject.transform.position, location) <= 1.5f;
 
     void Start()
@@ -44,10 +46,15 @@ public class MovementAIComponent : MonoBehaviour
         agent.SetDestination(location);
     }
 
-
+    public void ResetLocation()
+    {
+        //agent = null;
+        location = new Vector3(Random.Range(-10 , 10) , 0 , Random.Range(-10 , 10)) ;
+    }
     void Init()
     {
         agent = GetComponent<NavMeshAgent>();
+        location = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
     }
     private void OnDrawGizmos()
     {

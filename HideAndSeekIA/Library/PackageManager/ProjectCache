@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638756598425319858
-    m_Hash: 2397754744
+      ticks: 638756621735830270
+    m_Hash: 482938109
   m_LockFileStatus:
     m_FilePath: D:/Josua/UnityProjects/HideAndSeek/HideAndSeekIA/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638756598425626562
-    m_Hash: 3475803819
+      ticks: 638756621735830270
+    m_Hash: 2871161811
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
